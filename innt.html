@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Audio Player with Links</title>
+  <style>
+    body{
+      background-color: rgb(15, 15, 16);
+    }
+    .container{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      background-color: rgb(9, 9, 9);
+    }
+
+    .box1, .box2 {
+      
+      padding: 15px;
+      background: #9eb6b8f4;
+    
+    }
+    .box1{
+      width: 250px;
+      height: 600px;
+      background-color:darkcyan;
+    }
+    .box2 {
+      width: 700px;
+      height: 550px;
+      padding: 30px 200px;
+      
+    }
+
+    .box1 a {
+      display: block;
+      padding: 10px;
+      margin-bottom: 10px;
+      background: bisque;
+      text-decoration: none;
+      color: firebrick;
+      border-radius: 20px;
+      
+    }
+    .playerarea {
+      display: none;
+    }
+
+    :target {
+      display: block;
+    }
+    .playerarea img{
+      width: 500px;
+      height: 350px;
+      
+      
+    }
+    audio{
+      width: 500px;
+      height: 70px;  
+      box-shadow: 10px 0px 20px rgb(137, 160, 157); 
+
+      
+     
+    }
+    .list img{
+      /* border: 2px solid black; */
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      box-shadow: 10px -10px 10px rgb(84, 78, 79);
+      
+    }
+    .list2{
+      font-size: 15px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      color: white;
+      
+    }
+    h2{
+      padding: 2px 50px;
+    }
+    .photobg{
+      /* border: 2px solid black; */
+      height: 200px;
+      width: 1000px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      color: rgb(69, 159, 159);
+      padding-top: 50px;
+      padding-left: 50px;
+      padding-right: 100px;
+      padding-bottom: 100px;
+      font-size: 50px;
+    }
+   
+    input[type="text"]{
+      width: 150px;
+      height: 30px;
+      border-radius: 10px 10px;
+      text-align: center;
+      background-color: rgb(84, 166, 182);
+      color: #333;
+      
+    }
+    .second{
+      display: flex;
+      padding: 10px 30px;
+      gap: 100px;
+    }
+    .navbar{
+      /* border: 2px solid black; */
+      width: 300px;
+      height: 300px;padding: 10px 20px;
+      
+      
+    }
+    .navbar ul{
+      list-style-type: none;
+      display: block;
+      overflow: hidden;
+    }
+    .navbar li{
+      padding: 10px;
+      font-size: 20px;
+      font-family: Arial;
+      float: left;
+      
+    }
+    .navbar a{
+      text-decoration: none;
+      color: aliceblue;
+    }
+    .navbar a:hover{
+      background-color: rgb(47, 128, 199);
+    }
+    input[type="search"]{
+        width: 250px;
+        height: 30px;
+        border-radius: 10px 10px;
+        border-top: none;
+        background-color: #19c837;
+    }
+    
+
+    
+  </style>
+</head>
+<body>
+  <div class="second">
+      <div class="navbar">
+        <ul>
+          <li><a href=""><input type="search" placeholder="What do you want to play?"></a></li>
+          <li><a href=""> Your library</a></li>
+          <li><a href="">Music</a></li>
+          <li><a href="">popular music</a></li>
+          <li><a href="">Favourite</a></li>
+          <li><a href="">Album</a></li>
+         
+        </ul>
+                 
+                
+              
+      </div>
+      <div class="photobg">Audio Player<br>This Weekened<br>
+       <input type="text" placeholder="Enjoy">
+      </div>
+  </div>
+  <div class="container">
+  <div class="box1">
+   <font color="white"> <h2>Playlists</h2></font>
+    <a href="#audio1">Barso re</a>
+    <a href="#audio2">Apt</a>
+    <a href="#audio3">Nijage</a>
+    <a href="#audio4">Naosum</a>
+    <a href="#audio5">Enchanted</a>
+   
+    
+  </div>
+
+  <div class="box2">
+    <h2>Player</h2>
+    <div id="audio1" class="playerarea">
+      <p>Now Playing:Barso re</p>
+      <img src="barso.jpg"><br>
+      <audio src="barso.mp3" controls autoplay></audio>
+    </div>
+
+    <div id="audio2" class="playerarea">
+      <p>Now Playing: APT</p>
+      <img src="apt.jpg"><br>
+      <audio src="apt.mp3" controls></audio>
+    </div>
+
+    <div id="audio3" class="playerarea">
+      <p>Now Playing:Nijage</p>
+      <img src="nijage.jpg"><br>
+      <audio src="nijage.mp3" controls></audio>
+    </div>
+    <div id="audio4" class="playerarea">
+      <p>Now Playing:Naosum</p>
+      <img src="naoshum.jpg" controls><br>
+      <audio src="naosum.mp3" controls></audio>
+    </div>
+    
+    <div id="audio5" class="playerarea">
+      <p>Now Playing:Enchanted</p>
+      <img src="enchanted.jpg"controls><br>
+      <audio src="enchanted.mp3" controls></audio>
+    </div>
+    
+    
+    
+  </div>
+  </div>
+</body>
+</html>
